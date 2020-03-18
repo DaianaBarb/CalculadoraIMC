@@ -73,7 +73,17 @@ form button {
   margin-top: 30px;
    padding: 10px;
 }
-
+#hora{
+ text-align: center;
+  background: #cfb1ff;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 700;
+  height: 50px;
+  cursor: pointer;
+  margin-top: 30px;
+   padding: 10px;
+}
 form button:hover {
   background: var(--primary-color-darker);
 }

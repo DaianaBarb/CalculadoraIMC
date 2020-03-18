@@ -1,3 +1,30 @@
+const hora= document.querySelector('#hora');
+//um modo de fazer aparecer a data
+const data= new Date();
+//hora.innerHTML=data.toDateString('PT-BR', {dateStyle:'full', timeStyle: 'full'});
+// outro modo dde fazer aparecer a data
+function diaDaSemana(dia){
+	const dias = ['Segunda','Terça','Quarta','Quinta','Sexta','Sabado','Domingo'];
+
+	return dias[dia];
+
+}
+function Mes(mes){
+	const meses = ['Janeiro','Fevereiro','Março','Abril','Maio','Junho','Julho','Agosto','Setembro','Outubro','Novembro','Dezembro'];
+return meses[mes];
+}
+
+function criaData(data){
+	const dia=data.getDay();
+	const mes = data.getMonth();
+	const nomedia = diaDaSemana(dia);
+	const nomemes = Mes(mes);
+	//console.log(nomedia, nomemes);
+	return nomedia + ' '+ data.getDate()+ ' de '+ nomemes+' de '+ data.getFullYear();
+	}
+hora.innerHTML = criaData(data);
+
+//------------------------------------------------------------
 const form = document.querySelector('#form');
 form.addEventListener('submit',function(e){
 e.preventDefault();
